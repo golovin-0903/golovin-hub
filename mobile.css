@@ -9,8 +9,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     overflow-x: hidden;
+    overflow-y: auto; /* スクロール可能に */
+    padding-bottom: 50px; /* 下部に余白を追加 */
 }
 
 /* 質問箱リンク */
@@ -75,6 +76,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-bottom: 20px; /* 下部に余白を追加 */
 }
 
 .main-visual img {
@@ -204,4 +206,57 @@ body {
 
 .unext-link:hover {
     border-color: #0070C9; /* U-NEXT Blue */
+}
+
+/* SNSリンクセクション */
+.sns-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.sns-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sns-link .sns-icon {
+    font-size: 30px;
+    opacity: 0.8;
+}
+
+/* SNSプラットフォーム固有のスタイル */
+.x-link {
+    color: #000; /* Xの黒 */
+}
+
+.instagram-link {
+    color: #E1306C; /* Instagramのピンク */
+}
+
+.tiktok-link {
+    color: #000000; /* TikTokの黒 */
+}
+
+.youtube-link {
+    color: #FF0000; /* YouTubeの赤 */
+}
+
+.sns-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
