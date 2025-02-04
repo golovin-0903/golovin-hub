@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golovin Hub</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="top.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- メインビジュアル -->
+    <div class="main-visual">
+        <div class="swiper mainVisual">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/deividas-toleikis-H4QvHGNF_38-unsplash.jpg" alt="Portrait Photo">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/jean-luc-benazet-W5ahIhJgTw8-unsplash.jpg" alt="Portrait Photo">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/jorge-percival-65XQiEoAzj4-unsplash.jpg" alt="Portrait Photo">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/lloyd-kearney-0i6QB6JjVGA-unsplash.jpg" alt="Portrait Photo">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/lloyd-kearney-PDfa--k30Zg-unsplash.jpg" alt="Portrait Photo">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/nathan-wong-HT43RqP6Oxc-unsplash.jpg" alt="Portrait Photo">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="main-title">
+            <h1>
+                <span class="title-en">GOLOVIN HUB</span>
+                <span class="title-sub">Welcome to Golovin Hub, take your time to look around.</span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- コンテンツセクション -->
+    <div class="content-section">
+        <div class="section-inner">
+            <h2 class="section-title">
+                <span class="en">ABOUT</span>
+                <span class="jp">ゴロビンハブについて</span>
+            </h2>
+            <div class="section-content">
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mainVisual', {
+            effect: 'fade',
+            speed: 1500,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            touchRatio: 1,
+            resistanceRatio: 0,
+            followFinger: true
+        });
+    </script>
+</body>
+</html>

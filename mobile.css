@@ -1,0 +1,130 @@
+/* 全体のスタイル */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif JP', serif;
+    background-color: #fff;
+    color: #333;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TikTokリンク */
+.tiktok-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.tiktok-link:hover {
+    opacity: 0.95;
+}
+
+.tiktok-link:active {
+    opacity: 0.9;
+}
+
+/* 質問箱リンク */
+.question-box {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    padding: 15px 40px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.question-text {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.question-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.question-box:hover .question-border {
+    transform: scale(1.1);
+    border-color: #fff;
+}
+
+.question-box:hover .question-text {
+    color: #fff;
+}
+
+/* アニメーション */
+@keyframes borderPulse {
+    0% { transform: scale(1); opacity: 1; }
+    70% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.question-border {
+    animation: borderPulse 2s infinite ease-in-out;
+}
+
+/* メインビジュアル */
+.main-visual {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-visual img {
+    max-width: 100%;
+    max-height: 100vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* メインタイトル */
+.main-title {
+    position: absolute;
+    top: 16.666%; /* 上部1/3の中心に配置 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 98%; /* 横幅をさらに広げる */
+}
+
+.main-title h1 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-line {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: min(90vw, 20rem); /* サイズを画面幅いっぱいまで拡大 */
+    font-weight: 900; /* より太いウェイトを使用 */
+    letter-spacing: -0.02em; /* 文字間を詰めて横幅を確保 */
+    color: #000;
+    line-height: 0.8; /* 行間をさらに詰める */
+    text-transform: uppercase;
+    width: 100%;
+}

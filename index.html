@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After School</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- カスタムCSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- メインビジュアルスライダー -->
+        <div class="swiper mainVisual">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/deividas-toleikis-H4QvHGNF_38-unsplash.jpg" alt="Portrait Photo 1">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/jean-luc-benazet-W5ahIhJgTw8-unsplash.jpg" alt="Portrait Photo 2">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/jorge-percival-65XQiEoAzj4-unsplash.jpg" alt="Portrait Photo 3">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/lloyd-kearney-0i6QB6JjVGA-unsplash.jpg" alt="Portrait Photo 4">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/lloyd-kearney-PDfa--k30Zg-unsplash.jpg" alt="Portrait Photo 5">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <img src="images/nathan-wong-HT43RqP6Oxc-unsplash.jpg" alt="Portrait Photo 6">
+                    </div>
+                </div>
+            </div>
+            <!-- スクロールバー -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- カスタムJS -->
+    <script>
+        function shuffleSlides() {
+            const swiperWrapper = document.querySelector('.swiper-wrapper');
+            const slides = Array.from(swiperWrapper.children);
+            const shuffledSlides = [];
+            
+            // スライドをシャッフル
+            while (slides.length > 0) {
+                const randomIndex = Math.floor(Math.random() * slides.length);
+                shuffledSlides.push(slides[randomIndex]);
+                slides.splice(randomIndex, 1);
+            }
+            
+            // シャッフルしたスライドを再配置
+            shuffledSlides.forEach(slide => {
+                swiperWrapper.appendChild(slide);
+            });
+        }
+
+        // ページ読み込み時にスライドをシャッフル
+        window.addEventListener('load', shuffleSlides);
+
+        // Swiperの初期化
+        var swiper = new Swiper('.mainVisual', {
+            direction: 'vertical',
+            slidesPerView: 1,
+            spaceBetween: 0,
+            mousewheel: {
+                sensitivity: 1,
+                thresholdDelta: 50
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
+            speed: 800,
+            loop: false,
+            autoplay: false,
+            effect: 'slide',
+            freeMode: {
+                enabled: true,
+                sticky: false,
+                momentumBounce: true,
+                momentumRatio: 1
+            }
+        });
+    </script>
+</body>
+</html>
