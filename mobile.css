@@ -121,18 +121,36 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     width: 100%;
+    perspective: 500px; /* 3Dエフェクト用 */
 }
 
 .title-line {
     font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    color: black;
-    font-size: 2.5rem;
-    line-height: 1.2;
-    max-width: 90%;
-    text-align: center;
-    word-wrap: break-word;
-    hyphens: auto;
+    font-weight: 900;
+    color: #000;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    transform-origin: center;
+    backface-visibility: hidden;
+}
+
+.title-line:first-child {
+    transform: rotateX(-10deg);
+    opacity: 0.9;
+}
+
+.title-line:last-child {
+    transform: rotateX(10deg);
+    opacity: 0.9;
+}
+
+.title-line:hover {
+    transform: scale(1.05);
+    color: #333;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
 }
