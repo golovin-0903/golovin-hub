@@ -106,7 +106,15 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 98%; /* 横幅をさらに広げる */
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: black;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    max-width: 90%; /* 幅を調整 */
+    margin: 0 auto; /* 中央揃え */
+    word-wrap: break-word; /* 長い単語の折り返し */
+    hyphens: auto; /* ハイフネーション */
 }
 
 .main-title h1 {
