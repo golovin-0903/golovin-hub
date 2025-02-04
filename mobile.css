@@ -130,13 +130,15 @@ body {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     color: #000;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 8vw, 3rem); /* レスポンシブなフォントサイズ */
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     transform-origin: center;
     backface-visibility: hidden;
+    max-width: 90%;
+    text-align: center;
 }
 
 .title-line:first-child {
@@ -153,4 +155,11 @@ body {
     transform: scale(1.05);
     color: #333;
     text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+}
+
+@media screen and (max-width: 375px) {
+    .title-line {
+        font-size: clamp(1.2rem, 7vw, 2.5rem);
+        letter-spacing: 0.05em;
+    }
 }
