@@ -118,21 +118,21 @@ body {
 }
 
 .main-title h1 {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 .title-line {
-    display: block;
     font-family: 'Playfair Display', serif;
-    font-size: min(90vw, 20rem); /* サイズを画面幅いっぱいまで拡大 */
-    font-weight: 900; /* より太いウェイトを使用 */
-    letter-spacing: -0.02em; /* 文字間を詰めて横幅を確保 */
-    color: #000;
-    line-height: 0.8; /* 行間をさらに詰める */
-    text-transform: uppercase;
-    width: 100%;
+    font-weight: bold;
+    color: black;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    max-width: 90%;
+    text-align: center;
+    word-wrap: break-word;
+    hyphens: auto;
 }
